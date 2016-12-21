@@ -1,6 +1,6 @@
 name             'initial_setup'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Surya'
+maintainer_email 'suryalnvs@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures initial_setup'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
