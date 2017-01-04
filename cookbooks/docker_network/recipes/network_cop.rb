@@ -26,3 +26,18 @@ docker_container 'orderer1' do
    not_if "[ ! -z `docker ps -qaf 'name=orderer1'` ]"
    action :run
 end
+
+#docker_image 'lhaskins/fabric-peer' do
+#   tag 'latest'
+#   action 'pull'
+#end
+#docker_container 'peer1' do
+#   repo 'lhaskins/fabric-peer'
+#   tag 'latest'
+#   env [ '"CORE_PEER_ID": "vp0"', '"CORE_PEER_ADDRESSAUTODETECT": "false"', '"CORE_NEXT": "true"', '"CORE_PEER_ADDRESS": ":7051"', '"CORE_PEER_NETWORKID": "${CORE_PEER_NETWORKID}"', '"CORE_PEER_COMMITTER_ENABLED": "true"', '"CORE_PEER_COMMITTER_LEDGER_ORDERER": "54.202.176.39:5151"', '"CORE_PEER_PROFILE_ENABLED": "true"', '"CORE_PEER_DISCOVERY_PERIOD": "60s"', '"CORE_PEER_DISCOVERY_TOUCHPERIOD": "60s"', '"CORE_PEER_DISCOVERY_ROOTNODE": "54.202.179.211:7051"', '"CORE_VM_ENDPOINT": "tcp://54.202.179.211:2375"', '"CORE_LOGGING_LEVEL": "DEBUG"' ]
+#   port '7051:7051'
+#   volume ['/var/run:/host/var/run/']
+#   command 'peer node start'
+#   action :run
+#end
+
